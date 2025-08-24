@@ -11,8 +11,8 @@ CREATE TABLE tipo_prestamo (
     tasa_interes DECIMAL(5,4) NOT NULL CHECK (tasa_interes >= 0),
     validacion_automatica BOOLEAN NOT NULL DEFAULT false,
     activo BOOLEAN NOT NULL DEFAULT true,
-    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+    fecha_creacion TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    fecha_actualizacion TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
 
 -- Crear índices para optimizar búsquedas
