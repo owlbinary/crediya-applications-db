@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <!-- VERSION 1.0.0 - Módulo de solicitudes de préstamos -->
+    <include file="versions/v1.0.0/001-create-table-estados.sql" relativeToChangelogFile="true"/>
+    <include file="versions/v1.0.0/002-create-table-tipo-prestamo.sql" relativeToChangelogFile="true"/>
+    <include file="versions/v1.0.0/003-create-table-solicitud.sql" relativeToChangelogFile="true"/>
+    <include file="versions/v1.0.0/004-add-foreign-keys-solicitudes.sql" relativeToChangelogFile="true"/>
+    <include file="versions/v1.0.0/005-insert-initial-estados.sql" relativeToChangelogFile="true"/>
+    <include file="versions/v1.0.0/006-insert-initial-tipos-prestamo.sql" relativeToChangelogFile="true"/>
+    <include file="versions/v1.0.0/007-add-missing-fields-solicitud.sql" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>
