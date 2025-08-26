@@ -5,7 +5,7 @@
 
 CREATE TABLE solicitud (
     id_solicitud SERIAL PRIMARY KEY,
-    documento_identidad VARCHAR(20) NOT NULL,
+    documento_identidad VARCHAR(20) NOT NULL,  
     monto DECIMAL(15,2) NOT NULL CHECK (monto > 0),
     plazo INTEGER NOT NULL CHECK (plazo > 0),
     email VARCHAR(255) NOT NULL,
