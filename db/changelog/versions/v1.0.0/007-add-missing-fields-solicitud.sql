@@ -3,18 +3,9 @@
 --changeset crediya:007-add-missing-fields-solicitud
 --comment: Agregar campos faltantes a la tabla solicitud
 
--- Agregar campo tasa_interes
-ALTER TABLE solicitud 
-ADD COLUMN tasa_interes DECIMAL(5,4) NOT NULL DEFAULT 0.0000 
-CHECK (tasa_interes >= 0 AND tasa_interes <= 1);
-
--- Agregar campo estado_solicitud como texto adicional al id_estado
-ALTER TABLE solicitud 
-ADD COLUMN estado_solicitud VARCHAR(100);
-
 -- Agregar campo deuda_total_mensual_solicitudes_aprobadas
 ALTER TABLE solicitud 
 ADD COLUMN deuda_total_mensual_solicitudes_aprobadas DECIMAL(15,2) NOT NULL DEFAULT 0.00 
 CHECK (deuda_total_mensual_solicitudes_aprobadas >= 0);
 
---rollback ALTER TABLE solicitud DROP COLUMN IF EXISTS tasa_interes, DROP COLUMN IF EXISTS estado_solicitud, DROP COLUMN IF EXISTS deuda_total_mensual_solicitudes_aprobadas;
+--rollback ALTER TABLE solicitud DROP COLUMN IF EXISTS deuda_total_mensual_solicitudes_aprobadas;
